@@ -166,6 +166,7 @@ int main(void)
         printf("2. Sair\n");
         printf("Opção: ");
         scanf("%d", &opcao);
+        
 
         switch (opcao)
         {
@@ -997,7 +998,7 @@ void menu(struct Usuario usuarios[], int numUsuarios, struct Usuario usuarioLoga
         printf(textoMenu"5 - Ativar Produto                   ");
         printf(RED"|\n ");
         printf(RED"|");
-        printf(textoMenu"6 - Cadastrar Novo Usuario           ");
+        printf(textoMenu"6 - Opções de Usuario           ");
         printf(RED"|\n ");
         printf(RED"|");
         printf(textoMenu"7 - Saida de estoque                 ");
@@ -1046,6 +1047,11 @@ void menu(struct Usuario usuarios[], int numUsuarios, struct Usuario usuarioLoga
         case 5:
             printf("5 - Ativar produto\n");
             ativarProduto(produtos, numProdutos);
+            break;
+
+        case 6:
+            printf("6 - Opções de Usuario");
+            OpcoesDeUsuario(usuarios, numUsuarios);
             break;
 
         case 7:
